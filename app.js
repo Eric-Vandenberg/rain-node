@@ -5,5 +5,5 @@ request({
     json: true
 }, (err, res, body) => {
     if (err) throw err;
-    console.log(body);
+    console.log(JSON.stringify(body, undefined, 4));
 });
