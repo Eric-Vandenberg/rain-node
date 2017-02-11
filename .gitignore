@@ -1,3 +1,6 @@
+# Keys
+api-keys/*
+
 # Logs
 logs
 *.log
