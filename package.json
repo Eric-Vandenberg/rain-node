@@ -1,0 +1,12 @@
+{
+  "name": "rain-node",
+  "version": "1.0.0",
+  "description": "api fun",
+  "main": "index.js",
+  "repository": "https://github.com/Eric-Vandenberg/rain-node.git",
+  "author": "Eric Vandenberg <Eric1827v@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
