@@ -1,9 +1,8 @@
 `use strict`;
 
+const dotenv = require(`dotenv`).config();
 const yargs = require(`yargs`);
 const axios = require(`axios`);
-
-const keys = require(`./api-keys/config`);
 
 const argv = yargs
     .options({
@@ -29,7 +28,7 @@ axios.get(geocodeURL)
         }
         var lat = response.data.results[0].geometry.location.lat,
             lng = response.data.results[0].geometry.location.lng,
-            weatherUrl = `https://api.darksky.net/forecast/${keys.darksky}/${lat},${lng}`
+            weatherUrl = `https://api.darksky.net/forecast/${process.env.FORECAST_API}/${lat},${lng}`
         console.log(response.data.results[0].formatted_address);
         return axios.get(weatherUrl);
     }).then((response) => {
